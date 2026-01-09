@@ -25,6 +25,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+          cache-dependency-path: gateway/pom.xml
       
       - name: Run tests
         working-directory: ./gateway
@@ -47,6 +48,7 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
+          cache-dependency-path: qr-service/requirements.txt
       
       - name: Install dependencies
         working-directory: ./qr-service
